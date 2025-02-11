@@ -9,10 +9,18 @@ package com.breaze.demo_git_clase;
  * @author breaze
  */
 public class Buscador {
-    public int buscarNumero(int[] arreglo, int valor){
-        for (int i = 0; i < arreglo.length; i++) {
-            if (arreglo[i] == valor) {
-                return i; // Retorna la posición del elemento encontrado
+    public int buscarNumero(int[] arreglo, int objetivo){
+        int izquierda = 0, derecha = arreglo.length - 1;
+
+        while (izquierda <= derecha) {
+            int medio = izquierda + (derecha - izquierda) / 2;
+
+            if (arreglo[medio] == objetivo) {
+                return medio; // Elemento encontrado
+            } else if (arreglo[medio] < objetivo) {
+                izquierda = medio + 1; // Buscar en la mitad derecha
+            } else {
+                derecha = medio - 1; // Buscar en la mitad izquierda
             }
         }
         return -1; 
