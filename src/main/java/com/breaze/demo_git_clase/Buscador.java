@@ -12,7 +12,7 @@ public class Buscador {
     public int buscarNumero(int[] arreglo, int objetivo){
         int izquierda = 0, derecha = arreglo.length - 1;
 
-        while (izquierda <= derecha) {
+        while (izquierda <= derzecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
 
             if (arreglo[medio] == objetivo) {
