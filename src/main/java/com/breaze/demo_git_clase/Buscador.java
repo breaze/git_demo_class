@@ -9,10 +9,13 @@ package com.breaze.demo_git_clase;
  * @author breaze
  */
 public class Buscador {
-    public int buscarNumero(int[] arreglo, int valor){
-        for (int i = 0; i < arreglo.length; i++) {
-            if (arreglo[i] == valor) {
-                return i; // Retorna la posición del elemento encontrado
+    public int buscarNumero(int[] arreglo, int objetivo){
+        for (int i = 0; i < arreglo.length; i++) 
+        {
+            if (arreglo[i] == objetivo) 
+            {
+                return i;
+                // Retorna la posición del elemento encontrado
             }
         }
         return -1; 
